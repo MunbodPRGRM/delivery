@@ -1,6 +1,6 @@
-
 import 'package:delivery_app/config/internal_config.dart';
 import 'package:delivery_app/model/response/rider_login_post_res.dart';
+import 'package:delivery_app/pages/profile/rider_profile.dart';
 import 'package:flutter/material.dart';
 
 class RiderHome extends StatefulWidget {
@@ -28,10 +28,18 @@ class _RiderHomeState extends State<RiderHome> {
       //   context,
       //   MaterialPageRoute(builder: (context) => SendParcelScreen()),
       // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RiderProfile(rider: widget.rider),
+        ),
+      );
     } else if (index == 3) {
       // Navigator.pushReplacement(
       //   context,
-      //   MaterialPageRoute(builder: (context) => ProfileScreen()),
+      //   MaterialPageRoute(
+      //     builder: (context) => RiderProfile(rider: widget.rider),
+      //   ),
       // );
     }
   }
