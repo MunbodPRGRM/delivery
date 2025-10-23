@@ -1,6 +1,6 @@
-
 import 'package:delivery_app/config/internal_config.dart';
 import 'package:delivery_app/model/response/customer_login_post_res.dart';
+import 'package:delivery_app/pages/customer/empty_dashboard_screen.dart';
 import 'package:delivery_app/pages/profile/customer_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -25,14 +25,16 @@ class _CustomerHomeState extends State<CustomerHome> {
       //   MaterialPageRoute(builder: (context) => ParcelDashboardScreen()),
       // );
     } else if (index == 2) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => SendParcelScreen()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => EmptyDashboardScreen(user: widget.user,)),
+      );
     } else if (index == 3) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => CustomerProfile(user: widget.user,)),
+        MaterialPageRoute(
+          builder: (context) => CustomerProfile(user: widget.user),
+        ),
       );
     }
   }
