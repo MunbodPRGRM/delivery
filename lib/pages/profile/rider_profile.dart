@@ -2,6 +2,7 @@ import 'package:delivery_app/config/internal_config.dart';
 import 'package:delivery_app/model/response/rider_login_post_res.dart';
 import 'package:delivery_app/pages/auth/main_screen.dart';
 import 'package:delivery_app/pages/home/rider_home.dart';
+import 'package:delivery_app/pages/job/job_page.dart';
 import 'package:flutter/material.dart';
 
 class RiderProfile extends StatefulWidget {
@@ -46,10 +47,10 @@ class _RiderProfileState extends State<RiderProfile> {
         MaterialPageRoute(builder: (context) => RiderHome(rider: widget.rider)),
       );
     } else if (index == 1) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => ParcelDashboardScreen()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => JobPage(rider: widget.rider)),
+      );
     } else if (index == 2) {
       // Navigator.pushReplacement(
       //   context,

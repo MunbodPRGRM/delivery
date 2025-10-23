@@ -1,5 +1,6 @@
 import 'package:delivery_app/config/internal_config.dart';
 import 'package:delivery_app/model/response/rider_login_post_res.dart';
+import 'package:delivery_app/pages/job/job_page.dart';
 import 'package:delivery_app/pages/profile/rider_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -19,28 +20,17 @@ class _RiderHomeState extends State<RiderHome> {
     if (index == 0) {
       // อยู่หน้าแรกแล้ว
     } else if (index == 1) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => ParcelDashboardScreen()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => JobPage(rider: widget.rider)),
+      );
     } else if (index == 2) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => SendParcelScreen()),
-      // );
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => RiderProfile(rider: widget.rider),
         ),
       );
-    } else if (index == 3) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(
-      //     builder: (context) => RiderProfile(rider: widget.rider),
-      //   ),
-      // );
     }
   }
 
