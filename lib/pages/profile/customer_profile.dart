@@ -6,6 +6,7 @@ import 'package:delivery_app/model/response/customer_login_post_res.dart';
 import 'package:delivery_app/pages/auth/main_screen.dart';
 import 'package:delivery_app/pages/customer/empty_dashboard_screen.dart';
 import 'package:delivery_app/pages/home/customer_home.dart';
+import 'package:delivery_app/pages/mypackage/mypackage.dart';
 import 'package:delivery_app/pages/profile/add_address_map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -88,10 +89,10 @@ class _CustomerProfileState extends State<CustomerProfile> {
         ),
       );
     } else if (index == 1) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => ParcelDashboardScreen()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Mypackage(user: widget.user)),
+      );
     } else if (index == 2) {
       Navigator.pushReplacement(
         context,

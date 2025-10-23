@@ -1,6 +1,7 @@
 import 'package:delivery_app/model/response/customer_login_post_res.dart';
 import 'package:delivery_app/pages/customer/upload_package_screen.dart';
 import 'package:delivery_app/pages/home/customer_home.dart';
+import 'package:delivery_app/pages/mypackage/mypackage.dart';
 import 'package:delivery_app/pages/profile/customer_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -24,10 +25,10 @@ class _EmptyDashboardScreenState extends State<EmptyDashboardScreen> {
         ),
       );
     } else if (index == 1) {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => ParcelDashboardScreen()),
-      // );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Mypackage(user: widget.user)),
+      );
     } else if (index == 2) {
       Navigator.pushReplacement(
         context,
